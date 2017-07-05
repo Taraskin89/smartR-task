@@ -4,10 +4,12 @@ export default class SearchBar extends React.Component{
 
     render(){
         return(
+            <div id='search'>
                 <form action="//google.com/search" target="_blank">
                     <input name="q"  placeholder="Find a review"/>
-                    <input type="image" src="./img/search.png" />
+                    <input type="button"/>
                 </form>
+            </div>
         );
     }
 }

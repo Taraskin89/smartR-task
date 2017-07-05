@@ -1,0 +1,221 @@
+#header{
+    background: #fff url("./img/bg-header.png") 0 0 no-repeat;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 554px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .25);
+}
+.about-link{
+    display: -ms-flexbox;
+    display:-webkit-flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    -webkit-align-items: flex-start;
+    -webkit-flex-direction: row;
+    -webkit-justify-content: flex-end;
+}
+.about-link li{
+    margin: 25px;
+    padding-top: 10px;
+    font-family: AvenirNextCyr-Light;
+    font-size: 14px;
+}
+.about-link li a:hover{
+    color: #ffe89c;
+    border-bottom: 1px solid #ffe89c;
+}
+.logo{
+    display: -ms-flexbox;
+    display:-webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    -webkit-align-items: center;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: flex-start;
+    height: 66px;
+}
+.logo div{
+    display: inherit;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+    width: 190px;
+    height: 66px;
+    border: 2px solid #d9dad9;
+    border-radius: 2px;
+}
+.smart p{
+    font-family: NexaRustSans-Black;
+    color: white;
+    font-size: 22px;
+}
+.reviewer p{
+    color: #f1dc97;
+    font-family: NexaLight;
+    font-size: 10px;
+}
+.title{
+    display: -ms-flexbox;
+    display:-webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: center;
+    padding-top: 65px;
+}
+.title-1{
+    color: #ffffff;
+    font-family: AvenirNextCyr-Bold;
+    font-size: 31px;
+}
+.title-2{
+    color: #ffffff;
+    font-family: AvenirNextCyr-Light;
+    margin-top: 5px;
+    font-size: 22px;
+}
+#search{
+    margin-top: -3px;
+    margin-left: 80px;
+}
+form{
+    width: 700px;
+    padding: 50px;
+    position: relative;
+    margin: 0 auto;
+}
+input {
+    height: 25px;
+    width: 25px;
+    border:none;
+    border-radius: 5px;
+}
+input[name="q"] {
+    padding-right: 1.9em;
+    padding-left: 26px;
+    width: 530px;
+    height: 52px;
+    -webkit-appearance: none;
+}
+input[type="button"] {
+    background: url("./img/search.png") 0 0 no-repeat;
+    left: -2.7em;
+    position: relative;
+    vertical-align: middle;
+    border: none;
+}
+nav{
+    background:  rgba(50,50,50,0.6);
+    text-align: center;
+    height: 56px;
+    width: inherit;
+    position: relative;
+    margin: 0 auto;
+    top: 70px;
+}
+#menu {
+    display: -ms-flexbox;
+    display:-webkit-flex;
+    display: flex;
+            flex-direction: row;
+    -webkit-flex-direction: row;
+            justify-content: space-between;
+    -webkit-justify-content: space-between;
+            align-items: flex-end;
+    -webkit-align-items: flex-end;
+    font-family: Avenir-Heavy;
+    font-size: 15px;
+    font-weight: 100;
+}
+#menu li{
+    display:inherit;
+    justify-content: center;
+    align-items: center;
+    width: 134px;
+    height: 56px;
+
+}
+#menu li:hover a{
+    color: black;
+}
+#menu li:hover {
+    background: #e6e6e7;
+    color: black;
+}
+/*=======Drop-down-1=========*/
+#menu li ul{
+    display: none;
+    font-family: Avenir-Book;
+    font-size: 13px;
+    width: 210px;
+    position: absolute;
+    left:135px;
+    top: 56px;
+    background: #e6e6e7;
+    color: #333333;
+    z-index: 1;
+}
+
+#menu li ul li:hover{
+    background-color: #333333;
+}
+#menu li ul li:hover a{
+    color: white;
+}
+#menu li ul li{
+    padding-top: 10px;
+    height:35px;
+    text-align: left;
+    align-items: center;
+    width: 210px;
+}
+#menu li ul li a{
+    margin-left: 35px;
+    border-bottom: 1px solid #333333;
+    text-align: left;
+}
+#menu li:hover > ul.drop-menu1{
+    display: block;
+}
+
+/*=======Drop-down2=====*/
+#menu li ul li ul{
+    display: none;
+    width: 210px;
+    left: 210px;
+    position: absolute;
+    top: 105px;
+    background: #e6e6e7;
+    color: black;
+    z-index: 1;
+}
+#menu li ul li ul li:hover a{
+    color: white;
+}
+#menu li ul li ul li:hover{
+    background-color: #333333;
+}
+#menu li ul li:hover > ul.drop-menu2 li a{
+    color: black;
+}
+#menu li ul li:hover > ul.drop-menu2{
+    display: block;
+}
+
+
+/*@media screen and(min-width: 768px){*/
+    /*#menu li{*/
+        /*width: 76px;*/
+    /*}*/
+    /*#menu li ul{*/
+
+    /*}*/
+/*}*/

@@ -1,0 +1,115 @@
+#left-bar {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    justify-content: flex-start;
+    -webkit-justify-content: flex-start;
+    align-content: flex-start;
+    -webkit-align-items: flex-start;
+    width: 525px;
+    height: auto;
+    padding: 0;
+    margin: 0 30px 0 25px;
+
+}
+#left-bar div.logo{
+    margin-top: 70px;
+    display: -ms-flexbox;
+    display:-webkit-flex;
+    display: flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    justify-content: flex-start;
+    -webkit-justify-content: flex-start;
+    align-items: flex-start;
+    -webkit-align-items: flex-start;
+    height: 66px;
+}
+.footer-p{
+    font-family: AvenirNextCyr-Medium;
+    font-size: 20px;
+    color: #ffe89c;
+    margin-top: 30px;
+}
+#footer-about-span{
+    font-family: AvenirNextCyr-Light;
+    font-size: 17px;
+    color: #ececec;
+    margin-top: 30px;
+}
+
+#pop-tags{
+    display: flex;
+    width: 500px;
+    height: auto;
+    flex-wrap: wrap;
+}
+#pop-tags a{
+    font-family: AvenirNextCyr-Light;
+    font-size: 18px;
+    color: #ececec;
+    margin: 0 30px 0 0;
+    border-bottom: 1px solid #ececec;
+}
+
+/*@media screen and (min-device-width: 1024px){*/
+    /*#left-bar{*/
+        /*padding-top: 70px;*/
+        /*margin: 0 auto;*/
+        /*width: 800px;*/
+    /*}*/
+    /*#left-bar div.logo{*/
+        /*margin: 0 auto;*/
+        /*text-align: center;*/
+    /*}*/
+    /*#footer-about-span{*/
+        /*font-size: 22px;*/
+    /*}*/
+    /*.footer-p{*/
+        /*margin-bottom: 20px;*/
+    /*}*/
+    /*#pop-tags span{*/
+        /*text-align: center;*/
+    /*}*/
+    /*#pop-tags span a{*/
+        /*font-size: 17px;*/
+    /*}*/
+    /*#pop-tags, .popular-tags{*/
+        /*width: 700px;*/
+        /*height: auto;*/
+        /*margin: 0 auto;*/
+    /*}*/
+/*}*/
+/*@media screen and (min-width: 768px){*/
+    /*#left-bar{*/
+        /*padding-top: 70px;*/
+        /*margin: 0 auto;*/
+        /*width: 700px;*/
+    /*}*/
+    /*#left-bar div.logo{*/
+        /*margin: 0 auto;*/
+        /*text-align: center;*/
+    /*}*/
+    /*#footer-about-span{*/
+        /*font-size: 18px;*/
+    /*}*/
+    /*.footer-p{*/
+        /*margin-bottom: 20px;*/
+    /*}*/
+    /*#pop-tags span{*/
+        /*text-align: center;*/
+    /*}*/
+    /*#pop-tags span a{*/
+        /*font-size: 17px;*/
+    /*}*/
+    /*#pop-tags, .popular-tags{*/
+        /*width: 700px;*/
+        /*height: auto;*/
+        /*margin: 0 auto;*/
+    /*}*/
+/*}*/

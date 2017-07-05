@@ -1,0 +1,28 @@
+﻿.productRate {
+    background: url('./img/rating1.png');
+    width: 75px;
+    height: 15px;
+    position: relative;
+}
+.productRate div {
+    background-img: url('./img/rating1.png') left bottom;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.productRate span {
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: url('./img/rating1.png') left center;
+    width: 0;
+    cursor: pointer;
+}

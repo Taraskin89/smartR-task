@@ -7,6 +7,7 @@
                 rateEnd: function (value) { }
             }, options);
 
+        alert(rateEnd);
         function setRating(e, ul)
         {
             var i = parseInt(e.val());
@@ -67,11 +68,10 @@
             }
 
             setRating(e, ul);
-
             e.hide();
         });
 
-        return this;
-    }
 
+        return this;
+    };
 })(jQuery);

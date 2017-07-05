@@ -1,0 +1,110 @@
+@import "leftBar.css";
+@import "rightBar.css";
+
+/*article{*/
+    /*-webkit-column-count:2;*/
+    /*-moz-column-count:2;*/
+    /*column-count:2;*/
+/*}*/
+/*article {*/
+    /*-webkit-column-width:525px;*/
+    /*-moz-column-width:525px;*/
+    /*column-width:525px;*/
+/*}*/
+/*article#left-bar {*/
+    /*-webkit-column-count:1;*/
+    /*-moz-column-count:1;*/
+    /*column-count:1;*/
+/*}*/
+#footer{
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    min-height: 660px;
+}
+#bars{
+    background: #505050;
+    padding-bottom: 70px;
+}
+#bottom-menu{
+    position: relative;
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    background: #3b3b3b;
+    height: 60px;
+    width: 100%;
+    color: #fff;
+}
+#bottom-menu a{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-justify-content: center;
+    -ms-text-justify: auto;
+    -webkit-align-items: center;
+    margin-left: 20px;
+    color: white;
+}
+.letter{
+    font-family: AvenirNextCyr-Medium;
+    font-size: 12px;
+}
+
+/*@media screen and (min-device-width: 1024px){*/
+    /*#footer{*/
+        /*width: 1024px;*/
+    /*}*/
+    /*article{*/
+        /*margin: 0 auto;*/
+        /*-webkit-column-count:1;*/
+        /*-moz-column-count:1;*/
+        /*column-count:1;*/
+    /*}*/
+    /*article {*/
+        /*-webkit-column-width:1000px;*/
+        /*-moz-column-width:1000px;*/
+        /*column-width:1000px;*/
+    /*}*/
+    /*article#left-bar {*/
+        /*-webkit-column-count:1;*/
+        /*-moz-column-count:1;*/
+        /*column-count:1;*/
+    /*}*/
+    /*#bottom-menu{*/
+        /*width: 1020px;*/
+    /*}*/
+/*}*/
+/*@media screen and (min-width: 768px){*/
+    /*#footer{*/
+        /*width: 768px;*/
+    /*}*/
+    /*article{*/
+        /*margin: 0 auto;*/
+        /*-webkit-column-count:1;*/
+        /*-moz-column-count:1;*/
+        /*column-count:1;*/
+    /*}*/
+    /*article {*/
+        /*-webkit-column-width:768px;*/
+        /*-moz-column-width:768px;*/
+        /*column-width:768px;*/
+    /*}*/
+    /*article#left-bar {*/
+        /*-webkit-column-count:1;*/
+        /*-moz-column-count:1;*/
+        /*column-count:1;*/
+    /*}*/
+    /*#bottom-menu{*/
+        /*width: 768px;*/
+    /*}*/
+/*}*/

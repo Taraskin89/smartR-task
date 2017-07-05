@@ -1,26 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>Web-site</title>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-
-    <script type="text/javascript">
-        window.jQuery || document.write('<script type="text/javascript" src="./js/jquery-3.2.1.min.js"><\/script>');
-    </script>
-
-    <script type="text/javascript" src="./js/rating.js"></script>
-    <link rel="stylesheet" href="./styles/fonts/font.css">
-    <link rel="stylesheet" type="text/css" href="./styles/rating.css">
-    <link rel="stylesheet" type="text/css" href="./styles/style.css">
-    <script>
-        $(function ()
-        {
-            $('.rating').rating();
-
-            $('.ratingEvent').rating({ rateEnd: function (v) { $('#result').text(v); } });
-        });
-    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Smart Reviewer</title>
+    <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="./fonts/font.css"/>
+    <link rel="stylesheet" href="header.css"/>
+    <link rel="stylesheet" href="rating.css"/>
 </head>
 <body>
 <div id="app"></div>

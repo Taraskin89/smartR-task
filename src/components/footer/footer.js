@@ -2,14 +2,16 @@ import React from 'react';
 
 import RightBar from './rightBar'
 import LeftBar from './leftBar'
+import './footer.css';
+
 
 export default class Footer extends React.Component{
     render(){
         return(
             <div id='footer'>
                     <article id="bars">
-                            <LeftBar/>
-                            <RightBar/>
+                        <LeftBar/>
+                        <RightBar/>
                     </article>
                     <footer>
                         <div id="bottom-menu">

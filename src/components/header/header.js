@@ -2,23 +2,23 @@ import React from 'react';
 
 import SearchBar from './search';
 import Navigation from './navigation';
+// import './header.css';
 
 export default class Header extends React.Component{
 
     render(){
         return(
-            <div className='header'>
+            <header id='header'>
                 <div>
                     <ul className='about-link'>
-                        <div><li>
+                        <li>
                             <a href='#'>About us</a>
-                        </li></div>
-                        <div> <li>
+                        </li>
+                        <li>
                             <a href='#'>Contacts</a>
-                        </li></div>
+                        </li>
                     </ul>
                 </div>
-
                 <div className='logo'>
                     <div>
                         <pre className='smart'><p ><b>S M A R T</b></p></pre>
@@ -37,7 +37,7 @@ export default class Header extends React.Component{
 
                 <SearchBar/>
                 <Navigation/>
-            </div>
+            </header>
         );
     }
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import $ from 'jquery';
 
 export default class RightBar extends React.Component{
 
@@ -11,6 +12,51 @@ export default class RightBar extends React.Component{
             input: ''
         }
     }
+
+    componentDidMount(){
+        this.setRating();
+    }
+
+    setRating(){
+        let rating;
+        let x;
+        const productRate = $(".productRate");
+
+        productRate.hover(
+            function () { /* при наведении мыши на блок с рейтингом, динамически добавляем блок с подсветкой выбранной оценки */
+                $(this).append("<span></span>");
+            },
+            function () { /* при уходе с рейтинга, удаляем блок с подсветкой */
+                $(this).find("span").remove();
+            });
+
+        productRate.mousemove(
+
+            function(e){
+                if (!e) e =
+                    window.event;
+                if (e.pageX){
+                    x = e.pageX;
+                } else if (e.clientX){
+                    x = e.clientX + (document.documentElement.scrollLeft || document.body.scrollLeft) - document.documentElement.clientLeft;
+                }
+                let posLeft = 0;
+                let obj = this;
+                while (obj.offsetParent) {
+                    posLeft += obj.offsetLeft;
+                    obj = obj.offsetParent;
+                }
+                let offsetX = x-posLeft,
+                    modOffsetX = 5* offsetX % this.offsetWidth;
+                rating = parseInt(5 * offsetX / this.offsetWidth);
+
+                if (modOffsetX > 0) rating += 1;
+
+                $(this).find("span").eq(0).css("width", rating * 15 + "px");
+
+        });
+    }
+
 
     handleInputChange(e){
         this.setState({
@@ -32,14 +78,13 @@ export default class RightBar extends React.Component{
                                     <img src={ item.img } className='foo-img' alt={ item.title }/>
                                     <div className="items-info-foo">
                                         <span className='item-title-foo'>{ item.title }</span><br/>
-                                        <span>
-                                            <input
-                                            type="text"
-                                            className="rating rating5"
-                                            onChange={::this.handleInputChange}
-                                            value={5}/>
-                                        </span>
-                                        <pre>by <span className='item-auth-foo'>{ item.author }</span><span className="item-date-foo"> -{ item.date }</span></pre>
+                                        <div className="productRate">
+                                            <div style={{width: '75%'}}></div>
+                                        </div>
+                                        <br/>
+                                        <div className='author-line'>
+                                            <pre>by <span className='item-auth-foo'>{ item.author }</span> <span className="item-date-foo"> -{ item.date }</span></pre>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -50,19 +95,17 @@ export default class RightBar extends React.Component{
                 <div id="best-reviews">
                     {
                         reviews.map((item,index)=>{
-                            return <div className='item-popular-reviews' key={index}>
+                            return <div className='item-popular-prod' key={index}>
                                 <div className="fooo-item">
                                     <img src={ item.img } className='foo-img' alt={ item.title }/>
                                     <div className="items-info-foo">
                                         <span className='item-title-foo'>{ item.title }</span><br/>
-                                        <span>
-                                            <input
-                                            type="text"
-                                            className="rating rating5"
-                                            onChange={::this.handleInputChange}
-                                            value={4}/>
-                                        </span>
-                                        <pre>by <span className='item-auth-foo'>{ item.author }</span><span className="item-date-foo"> -{ item.date }</span></pre>
+                                        <div className="productRate">
+                                            <div style={{width: '85%'}}></div>
+                                        </div><br/>
+                                        <div className='author-line'>
+                                            <pre>by <span className='item-auth-foo'>{ item.author }</span> <span className="item-date-foo"> -{ item.date }</span></pre>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
