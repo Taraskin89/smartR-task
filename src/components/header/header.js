@@ -4,6 +4,7 @@ import SearchBar from './search';
 import Navigation from './navigation';
 // import './header.css';
 
+
 export default class Header extends React.Component{
 
     render(){
@@ -19,22 +20,17 @@ export default class Header extends React.Component{
                         </li>
                     </ul>
                 </div>
-                <div className='logo'>
-                    <div>
-                        <pre className='smart'><p ><b>S M A R T</b></p></pre>
-                        <pre className='reviewer'><p>R E V I E W E R</p></pre>
-                    </div>
-                </div>
-
+                <a href='#' className='logo'>
+                    <img src='./img/logo.png' />
+                 </a>
                 <div className='title'>
                     <div className='title-1'>
-                        <p>Only true and best reviews from the industry professionals</p>
+                        Only true and best reviews from the industry professionals
                     </div>
                     <div className='title-2'>
-                        <p>Over 1000+ truthful reviews of different products and services </p>
+                        Over 1000+ truthful reviews of different products and services
                     </div>
                 </div>
-
                 <SearchBar/>
                 <Navigation/>
             </header>

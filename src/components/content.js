@@ -1,7 +1,10 @@
 import React from 'react';
 import $ from 'jquery';
 
+import Item from './item.js';
 import './content.css';
+import {loadData} from './loader.js';
+import load from './loader.js';
 
 export default class Content extends React.Component{
 
@@ -10,8 +13,10 @@ export default class Content extends React.Component{
 
         this.state = {
             content: item,
-            input:''
+            newContent: [],
+            isFull: false
         }
+         this.setRating();
     }
 
     componentDidMount(){
@@ -24,10 +29,10 @@ export default class Content extends React.Component{
         const productRate = $(".productRate");
 
         productRate.hover(
-            function () { /* при наведении мыши на блок с рейтингом, динамически добавляем блок с подсветкой выбранной оценки */
+            function () { 
                 $(this).append("<span></span>");
             },
-            function () { /* при уходе с рейтинга, удаляем блок с подсветкой */
+            function () { 
                 $(this).find("span").remove();
             });
 
@@ -59,7 +64,6 @@ export default class Content extends React.Component{
 
 
         productRate.click(function () {
-            console.log("Я ставлю " + rating);
             if(rating >= 4) $(this).parent().parent().children().children('.best').removeClass('unvisible');
             else $(this).parent().parent().children().children('.best').addClass('unvisible');
             return true;
@@ -72,55 +76,39 @@ export default class Content extends React.Component{
         });
     }
 
+    getMoreItems(){
+         const { isFull } = this.state;
+         if(isFull){
+            this.setState({
+                newContent: [],
+                isFull: false
+            });
+         }
+         else{
+            load(this.props.data).then(data => {
+            this.initialData = JSON.parse(data);
+
+            this.setState({
+                newContent: this.initialData,
+                isFull: true
+            });
+        });
+         }
+        
+    }
+
     render(){
-        const { content } = this.state;
+        const { content, newContent, isFull } = this.state;
         const choice = 'servers';
         return(
             <div id='content'>
-                <article className="content-bloc">
-                    {
-                        content.map((data, index)=>{
-                            return<div className='item' key={ index }>
-                                <div className='best-choise-seller'>
-                                <img src={ data.img } className="item-img" alt={data.title}/>
-                                    <div className='best unvisible'>
-                                        BEST { data.tag.indexOf(choice) != -1 ? 'CHOICE' : 'SELLER' }
-                                    </div>
-                                </div>
-                                <div className="item-content">
-                                    <div>
-                                        <b>
-                                            <span ><p className='item-title'>{ data.title }</p></span>
-                                        </b>
-                                    </div>
-                                    <div className="productRate">
-                                        <div style={{width: '55%'}}></div>
-                                        <div className="rat-list"></div>
-                                    </div>
-                                    <div className='item-authors'>
-                                        by<span className='item-auth'> { data.author }</span>
-                                        <span className='item-date'>- { data.date }</span>
-                                    </div>
-                                    <p className='item-text'>{data.text}</p>
-                                    <div className='item-tags'>
-                                        <p><ins>{data.tag}</ins></p>
-                                    </div>
-                                    <div className='horizontal-line'>
-                                        <span> </span>
-                                    </div>
-                                    <a href="#" className='item-read-review'>READ REVIEW</a>
-                                </div>
-                            </div>
-
-                        })
-                    }
-                </article>
+                    <Item content={ this.state.content } />
+                    <Item content={ this.state.newContent } />
                 <div className="btn-more">
-                    <div id="read-more">
-                        <a href="#">LOAD MORE</a>
+                    <div id="read-more" onClick={ ::this.getMoreItems }>
+                        <span> { isFull ? 'HIDE' : 'LOAD MORE'}</span>
                     </div>
                 </div>
-
             </div>
         );
     }

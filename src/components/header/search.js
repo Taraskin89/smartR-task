@@ -4,12 +4,10 @@ export default class SearchBar extends React.Component{
 
     render(){
         return(
-            <div id='search'>
-                <form action="//google.com/search" target="_blank">
-                    <input name="q"  placeholder="Find a review"/>
-                    <input type="button"/>
-                </form>
-            </div>
+            <form action='//google.com/search' target='_blank' className='search'>
+                <input type='search' name='q'  className='input' placeholder='Find a review'/>
+                <input type='submit' className='submit' value=''/>
+            </form>
         );
     }
 }

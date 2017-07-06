@@ -1,7 +1,7 @@
 #content {
     width: inherit;
     padding: 0;
-    margin: 55px 20px 40px 50px;
+    margin: 55px 30px 30px 50px;
 
 }
 .content-bloc{
@@ -14,15 +14,14 @@
     align-content: stretch;
     align-items: flex-start;
     -webkit-align-items: flex-start;
-    -webkit-align-content: stretch;
+    -webkit-align-content: center;
     -webkit-flex-direction: row;
-    -webkit-justify-content: flex-end;
+    -webkit-justify-content: center;
     -ms-flex-align: start;
     -ms-flex-direction: row;
     -ms-flex-wrap: wrap;
 }
 .item{
-
     width: 295px;
     margin: 0 20px 20px 0;
     box-shadow: 0 0 1px rgba(0,0,0,0.3);
@@ -61,6 +60,9 @@
     color: #7e7e7e;
     margin-bottom: 12px;
 
+}
+.item-img{
+    margin-left: -15px;
 }
 div.item-tag{
     font-family: AvenirNextCyr-Light;
@@ -107,7 +109,7 @@ div.item-tag{
     height: 50px;
     border: 1px solid #c4c4c4;
 }
-#read-more a{
+#read-more span{
     font-family: AvenirNextCyr-Light;
     margin: 15px 0 0 0;
     color: #878787;
@@ -121,6 +123,7 @@ div.item-tag{
     width: 97px;
     height: 27px;
     background-color: rgba(214, 55, 55 0.7);
+    margin-left: -15px;
 }
 .best-choise-seller{
     display:inline-block;
@@ -135,22 +138,34 @@ div.item-tag{
     left:0;
     color:#FFF;
     font-family:AvenirNextCyr-Medium;
-    font-size:15px;
+    font-size:12px;
     white-space: nowrap;
     background-color:rgba(214, 55, 55, .8);
-    padding:5px 0 5px 5px;
+    padding:5px 0 5px 15px;
 }
 
 .unvisible{
     visibility: hidden;
 }
-/*@media screen and(min-width: 768px){*/
-    /*#content {*/
-        /*width: inherit;*/
-        /*padding: 0;*/
-        /*margin: 55px 30px 40px 30px;*/
-    /*}*/
-    /*.item{*/
-        /*margin: 0 50px 30px 0;*/
-    /*}*/
-/*}*/
+
+
+@media screen and (max-width: 1024px){
+    #content {
+        width: inherit;
+        padding: 0;
+        margin: 55px 10px 40px 10px;
+    }
+    .item{
+        margin: 0 20px 30px 0;
+    }
+}
+@media screen and (max-width: 768px){
+    #content {
+        width: inherit;
+        padding: 0;
+        margin: 55px 30px 40px 30px;
+    }
+    .item{
+        margin: 0 50px 30px 0;
+    }
+}

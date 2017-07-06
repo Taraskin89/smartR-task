@@ -73,21 +73,20 @@ export default class RightBar extends React.Component{
                 <div id="best-products">
                     {
                         products.map((item,index)=>{
-                            return <div className='item-popular-prod' key={index}>
-                                <div className="fooo-item">
+                            return <div key={index} className="fooo-item">
                                     <img src={ item.img } className='foo-img' alt={ item.title }/>
-                                    <div className="items-info-foo">
+                                    <a href='#' className="items-info-foo">
                                         <span className='item-title-foo'>{ item.title }</span><br/>
                                         <div className="productRate">
                                             <div style={{width: '75%'}}></div>
                                         </div>
                                         <br/>
                                         <div className='author-line'>
-                                            <pre>by <span className='item-auth-foo'>{ item.author }</span> <span className="item-date-foo"> -{ item.date }</span></pre>
+                                            by &nbsp;<span className='item-auth-foo'>{ item.author }</span>
+                                            <span className="item-date-foo">&nbsp; -{ item.date }</span>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
-                            </div>
                         })
                     }
                 </div>
@@ -95,20 +94,19 @@ export default class RightBar extends React.Component{
                 <div id="best-reviews">
                     {
                         reviews.map((item,index)=>{
-                            return <div className='item-popular-prod' key={index}>
-                                <div className="fooo-item">
+                            return <div key={index} className="fooo-item">
                                     <img src={ item.img } className='foo-img' alt={ item.title }/>
-                                    <div className="items-info-foo">
+                                    <a href="#" className="items-info-foo">
                                         <span className='item-title-foo'>{ item.title }</span><br/>
                                         <div className="productRate">
                                             <div style={{width: '85%'}}></div>
                                         </div><br/>
                                         <div className='author-line'>
-                                            <pre>by <span className='item-auth-foo'>{ item.author }</span> <span className="item-date-foo"> -{ item.date }</span></pre>
+                                            by &nbsp;<span className='item-auth-foo'>{ item.author }</span> 
+                                            <span className="item-date-foo"> &nbsp;-&nbsp;{ item.date }</span>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
-                            </div>
                         })
                     }
                 </div>
